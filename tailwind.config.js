@@ -10,7 +10,8 @@ export default {
         main: "#0F172A",
       },
       colors: {
-        main: "#0F172A",
+        main: "#517FA1",
+        secondary: "#18375D",
       },
     },
     fontFamily: {
