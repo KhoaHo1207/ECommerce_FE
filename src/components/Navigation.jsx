@@ -6,7 +6,7 @@ const notActivedStyle = "";
 const activedStyle = "";
 const Navigation = () => {
   return (
-    <div className="flex h-[48px] w-main items-center border py-2 text-sm">
+    <div className="mb-6 flex h-[48px] w-main items-center border-y py-2 text-sm">
       {navigation &&
         navigation.length > 0 &&
         navigation.map((item, index) => {

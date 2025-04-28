@@ -1,12 +1,11 @@
 import React from "react";
-import BannerHomepage from "../assets/Banner.webp";
 const Banner = () => {
   return (
     <div className="w-full">
       <img
-        src={BannerHomepage}
+        src="https://cdn.vectorstock.com/i/500p/91/98/shopping-online-with-discount-conceptual-banner-vector-47519198.jpg"
         alt="Banner"
-        className="w-full object-contain"
+        className="object-fit h-[400px] w-full rounded-md"
       />
     </div>
   );

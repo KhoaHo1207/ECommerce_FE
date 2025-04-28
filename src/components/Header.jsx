@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import path from "../utils/path";
 const Header = () => {
   return (
-    <div className="flex h-[110px] w-main justify-between border py-[35px]">
+    <div className="flex h-[110px] w-main justify-between py-[35px]">
       <Link to={`${path.HOME}`}>
         <img
           src={Logo_Content_NoBackground}
