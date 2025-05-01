@@ -18,5 +18,5 @@ export default {
       main: ["Poppins", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: ["@tailwindcss/line-clamp"],
 };

@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { apiGetProduct } from "../services/product";
 import Product from "./Product";
 import Slider from "react-slick";
-const tabs = ["Best Sellers", "New Arrivals", "Tablets"];
+const tabs = ["Best Sellers", "New Arrivals"];
 const BestSeller = () => {
   const [bestSellers, setBestSellers] = useState([]);
   const [newProducts, setNewProducts] = useState([]);
-  const [isActiveTab, setIsActiveTab] = useState(0);
-
+  const [activeTab, setActiveTab] = useState(0);
+  const [products, setProducts] = useState([]);
   var settings = {
     dots: false,
     infinite: false,
@@ -29,27 +29,35 @@ const BestSeller = () => {
     fetchProducts();
   }, []);
 
+  useEffect(() => {
+    if (activeTab === 0) setProducts(bestSellers);
+    if (activeTab === 1) setProducts(newProducts);
+  }, [activeTab, bestSellers, newProducts]);
   return (
     <div>
-      <div className="mt-5 flex gap-8 border-b-2 border-main pb-4 text-[20px]">
+      <div className="ml-[-32px] flex pb-4 text-[20px]">
         {tabs &&
           tabs.length > 0 &&
           tabs.map((tab, index) => {
             return (
               <span
-                className={`cursor-pointer border-r pr-8 font-semibold capitalize text-gray-400 ${isActiveTab === index ? "font-bold text-black" : ""}`}
+                className={`cursor-pointer border-r px-8 font-semibold capitalize text-gray-400 ${activeTab === index ? "font-bold text-gray-900" : ""}`}
                 key={index}
-                onClick={() => setIsActiveTab(index)}
+                onClick={() => setActiveTab(index)}
               >
                 {tab}
               </span>
             );
           })}
       </div>
-      <div className="mt-4">
+      <div className="mx-[10px] mt-4 border-t-2 border-main pt-4">
         <Slider {...settings}>
-          {bestSellers?.map((item, index) => (
-            <Product key={index} data={item} />
+          {products.map((item, index) => (
+            <Product
+              key={index}
+              product={item}
+              isNew={activeTab === 0 ? false : true}
+            />
           ))}
         </Slider>
       </div>
