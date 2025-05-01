@@ -1,6 +1,8 @@
-//Category
+import productCategoryEndpoints from "./productCategory";
+import productEndpoints from "./product";
 const apis = {
-  getProductCategory: "/productCategory",
+  productCategoryEndpoints: productCategoryEndpoints,
+  productEndpoints: productEndpoints,
 };
 
 export default apis;

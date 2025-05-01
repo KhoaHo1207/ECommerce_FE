@@ -7,7 +7,7 @@ export default {
         main: "1220px",
       },
       backgroundColor: {
-        main: "#0F172A",
+        main: "#517FA1",
       },
       colors: {
         main: "#517FA1",

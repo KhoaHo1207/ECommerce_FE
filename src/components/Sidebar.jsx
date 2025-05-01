@@ -6,6 +6,7 @@ import { createSlug } from "../utils/helper";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductCategories } from "../store/thunks/productCategoryThunk";
+import { List } from "lucide-react";
 const Sidebar = () => {
   const { productCategories, loading, error } = useSelector(
     (state) => state.productCategory,
@@ -33,6 +34,10 @@ const Sidebar = () => {
         <>
           {productCategories && productCategories.length > 0 ? (
             <div className="flex flex-col border">
+              <div className="flex items-start gap-3 bg-main p-3 text-white">
+                <List />
+                <span>ALL COLLECTIONS</span>
+              </div>
               {productCategories.map((item, index) => {
                 return (
                   <NavLink

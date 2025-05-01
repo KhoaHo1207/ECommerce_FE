@@ -5,7 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Bounce, ToastContainer } from "react-toastify";
 import { Provider } from "react-redux";
 import { store } from "./store/store.js";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <BrowserRouter>

@@ -1,5 +1,5 @@
-import React from "react";
-import { Banner, Sidebar } from "../../components/index";
+import React, { useEffect, useState } from "react";
+import { Banner, BestSeller, Sidebar } from "../../components/index";
 const Home = () => {
   return (
     <div className="flex w-main">
@@ -9,7 +9,7 @@ const Home = () => {
       </div>
       <div className="flex w-[80%] flex-auto flex-col gap-5 pl-5">
         <Banner />
-        <span>Best Seller</span>
+        <BestSeller />
       </div>
     </div>
   );

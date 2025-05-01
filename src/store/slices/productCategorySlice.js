@@ -23,7 +23,7 @@ const productCategorySlice = createSlice({
     builder.addCase(actions.getProductCategories.rejected, (state, action) => {
       state.loading = false;
       state.error = action.error;
-      toast.error(action.error.message);
+      // toast.error(action.error.message);
     });
   },
 });

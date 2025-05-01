@@ -1,8 +1,11 @@
 import axiosInstance from "../config/axios";
 import apis from "../apis/index";
+import { toast } from "react-toastify";
 const apiGetProductCategories = async () => {
   try {
-    const response = await axiosInstance.get(`${apis.getProductCategory}`);
+    const response = await axiosInstance.get(
+      `${apis.productCategoryEndpoints.getAll}`,
+    );
     return response;
   } catch (error) {
     console.log(
