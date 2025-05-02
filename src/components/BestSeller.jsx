@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { apiGetProduct } from "../services/product";
 import Product from "./Product";
 import Slider from "react-slick";
+import Banner1 from "../assets/Banner1.avif";
+import Banner2 from "../assets/Banner2.avif";
+
 const tabs = ["Best Sellers", "New Arrivals"];
 const BestSeller = () => {
   const [bestSellers, setBestSellers] = useState([]);
@@ -50,7 +53,7 @@ const BestSeller = () => {
             );
           })}
       </div>
-      <div className="mx-[-10px] mt-4 border-t-2 border-main pt-4">
+      <div className="mt-4 border-t-2 border-main pt-8">
         <Slider {...settings}>
           {products.map((item, index) => (
             <Product
@@ -60,6 +63,10 @@ const BestSeller = () => {
             />
           ))}
         </Slider>
+        <div className="mt-8 flex w-full justify-between">
+          <img src={Banner1} alt="" className="flex-1 object-contain" />
+          <img src={Banner2} alt="" className="flex-1 object-contain" />
+        </div>
       </div>
     </div>
   );

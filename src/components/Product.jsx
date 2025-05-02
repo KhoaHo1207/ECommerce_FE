@@ -4,8 +4,8 @@ import Label from "../assets/label.png";
 const NO_PRODUCT = "https://bepharco.com/no-products-found.png";
 import { renderStarFromMember } from "../utils/helper";
 import SelectOption from "./SelectOption";
-import { Heart, Menu, Eye } from "lucide-react";
-
+import icons from "../utils/icon";
+const { Heart, Menu, Eye } = icons;
 const Items = [
   {
     icon: <Heart className="h-4 w-4" />,

@@ -1,4 +1,14 @@
-import { Phone, Mail, ShoppingCart, User, House } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  ShoppingCart,
+  User,
+  House,
+  Heart,
+  Menu,
+  Eye,
+  Star,
+} from "lucide-react";
 
 const icons = {
   Phone,
@@ -6,6 +16,10 @@ const icons = {
   ShoppingCart,
   User,
   House,
+  Heart,
+  Menu,
+  Eye,
+  Star,
 };
 
 export default icons;

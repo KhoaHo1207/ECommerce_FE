@@ -1,4 +1,6 @@
-import { Star } from "lucide-react";
+import icons from "../utils/icon";
+
+const { Star } = icons;
 export const createSlug = (string) =>
   string
     .toLowerCase()
@@ -7,7 +9,7 @@ export const createSlug = (string) =>
     .split(" ")
     .join("-");
 
-export const formatCurrency = (number) => number.toLocaleString("vi-VN");
+export const formatCurrency = (number) => number?.toLocaleString("vi-VN");
 
 export const renderStarFromMember = (number) => {
   const validNumber = Math.min(Math.max(Number(number), 0), 5);
