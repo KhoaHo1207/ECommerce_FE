@@ -35,7 +35,7 @@ const BestSeller = () => {
   }, [activeTab, bestSellers, newProducts]);
   return (
     <div>
-      <div className="ml-[-32px] flex pb-4 text-[20px]">
+      <div className="ml-[-32px] flex text-[20px]">
         {tabs &&
           tabs.length > 0 &&
           tabs.map((tab, index) => {
@@ -50,7 +50,7 @@ const BestSeller = () => {
             );
           })}
       </div>
-      <div className="mx-[10px] mt-4 border-t-2 border-main pt-4">
+      <div className="mx-[-10px] mt-4 border-t-2 border-main pt-4">
         <Slider {...settings}>
           {products.map((item, index) => (
             <Product
