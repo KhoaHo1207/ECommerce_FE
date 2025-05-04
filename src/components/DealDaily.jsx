@@ -19,7 +19,6 @@ const DealDaily = () => {
       toast.error("Error fetching deal daily data");
       return;
     }
-    console.log(response?.data[0]);
   };
 
   useEffect(() => {

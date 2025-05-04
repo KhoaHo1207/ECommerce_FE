@@ -5,3 +5,4 @@ export { default as Sidebar } from "./Sidebar";
 export { default as BestSeller } from "./BestSeller";
 export { default as SelectOption } from "./SelectOption";
 export { default as Countdown } from "./Countdown";
+export { default as FeatureProduct } from "./FeatureProduct";
